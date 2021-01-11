@@ -11,3 +11,9 @@
   * Whenever they enter a new thing, it will have a small fade in effect.
   * Animations and functionalities.
 
+## I have completed both the tasks/projects successfully. Kindly check the respective folder's readme file to check my progress.
+
+
+  Harshita Verma <br>
+  Github : ineffable23 <br>
+  Email : harshitav111@gmail.com
