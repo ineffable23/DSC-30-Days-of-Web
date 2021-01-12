@@ -397,14 +397,14 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="mailto:harshitav111@gmail.com" method="POST" enctype="text/plain" class="email-form">
+            <form action="" method="POST" enctype="text/plain" class="email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="First Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="fname" class="form-control" id="name" placeholder="First Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Last Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="lname" class="form-control" id="name" placeholder="Last Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validate"></div>
                 </div>
               </div>
@@ -426,7 +426,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" onClick="readText(this.form)">Send Message</button></div>
             </form>
 
           </div>
@@ -460,7 +460,6 @@
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
   <div id="preloader"></div>
 
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -477,6 +476,13 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- form js -->
+  <script language="javaScript">
+  function readText (form) {
+      TestVar =form.fname.value +" "+ form.lname.value +" "+ form.email.value +" "+ form.subject.value +" "+ form.message.value;
+      alert ("You typed: " + TestVar);
+  }
+  </script>
 </body>
 
 </html>
