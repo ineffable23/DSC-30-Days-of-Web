@@ -1,3 +1,49 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyBFV-9BEUMlB1Wcv7FV0cVYsz0g9girES8",
+  authDomain: "hv-ineffable23.firebaseapp.com",
+  projectId: "hv-ineffable23",
+  storageBucket: "hv-ineffable23.appspot.com",
+  messagingSenderId: "625996548875",
+  appId: "1:625996548875:web:87e9c9f17b74b2cbb2700e"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var firestore = firebase.firestore();
+
+// start grabbing our DOM element
+const submitBtn = document.querySelector('#submit');
+
+let userFName = document.querySelector('#userFirstName');
+let userLName = document.querySelector('#userLastName');
+let userEmail = document.querySelector('#userEmail');
+let userSubject = document.querySelector('#userSubject');
+let userMessage = document.querySelector('#userMessage');
+
+const db = firestore.collection("contactData");
+
+submitBtn.addEventListener('click', function(){
+  let userFNameInput = userFName.value;
+  let userLNameInput = userLName.value;
+  let userEmailInput = userEmail.value;
+  let userSubjectInput = userSubject.value;
+  let userMessageInput = userMessage.value;
+
+  // Access the Database collection
+  db.doc().set({
+    fname : userFNameInput,
+    lname : userLNameInput,
+    email : userEmailInput,
+    subject : userSubjectInput,
+    Message : userMessageInput
+  }).then(function(){
+    console.log("Data Saved");
+  }).catch(function(error){
+    console.log(error);
+  })
+})
+
 
 !(function($) {
   "use strict";
